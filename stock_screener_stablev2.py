@@ -290,14 +290,13 @@ class StockScreenerApp:
                 logger.info(f"Fetching Quarterly Data for {symbol}")
                 
                 urls = [
-                    f"https://www.screener.in/company/{symbol}/consolidated/",
-                    f"https://www.screener.in/company/{symbol}/"
-                    
+                    f"https://www.screener.in/company/{symbol}/",
+                    f"https://www.screener.in/company/{symbol}/consolidated/"
                 ]
                 
                 sales_row = None
                 eps_row = None
-                net_profit_row = None
+                net_profit_row = None   
                 
                 session = requests.Session()
                 headers = {
